@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.css{
+    color: red;
+    transition: all .2s;
+    filter: blur(1px);
+}
+.styles{
+    height: 200px;
+    width: 200px;
+}
+.index{
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+}
+.card {
+    width: 45ch;
+    height: 45ch;
+    background: grey;
+    border-radius: 5px;
+    background-image: url('../../assets/images/asuka.jpg');
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s;
+    will-change: transform;
+    border: 15px solid white;
+    margin-top: 50px;
+  }
+  .card:hover {
+    box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
+  }
