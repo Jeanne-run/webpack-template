@@ -124,7 +124,7 @@ module.exports = {
       new OptimizeCSSAssetsPlugin({
         cssProcessor: require('cssnano'),
         cssProcessorOptions: {
-          discardComments: { removeAll: true },
+          discardComments: { removeAll: true },// 移除注释
           parser: require('postcss-safe-parser'),
           autoprefixer: { disable: true }
         },
@@ -137,7 +137,9 @@ module.exports = {
      * 导致app.hash.js文件很大，js越大，请求js文件和执行文件的时间越长，页面呈现给用户的耗时就越久
      */
     splitChunks: {
+       minSize: 3000,
       cacheGroups: {
+        // 默认的配置
         commons: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',

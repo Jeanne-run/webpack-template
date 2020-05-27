@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
+import Zooming from 'zooming';
 import Header from '@src/components/Header/Header';
 
 import asuka from '../../assets/images/asuka.jpg'
@@ -20,11 +21,17 @@ export default function Home() {
 
   const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 1, tension: 170, friction: 26 } }))
  
+  React.useEffect(() => {
+    // new Zooming({
+    //   bgColor:'red',
+    //   customSize: { width: 400, height: 400 }
+    // }).listen('.wdnmd')
+  },[])
 
   return (
     
     <div className={styles.index}>
-     
+     {/* <img src={asuka}   className={`${styles.imgZoomable} wdnmd`} alt=""/> */}
       {/* <Header name='webpack' />
       <h1 className={styles.css}>使用Webpack等搭建一个适用于React项目的脚手架</h1>
       <img src={asuka} style={styles.img} alt=""/> */}
